@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'OBAutoCalendar'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    from {
+        (configurations.runtime).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    manifest {
+        attributes("Main-Class": "OBAutoCalendar" )
+    }
+}
+
+dependencies {
+
+    compile 'com.google.apis:google-api-services-gmail:v1-rev82-1.23.0'    
+    compile 'com.google.api-client:google-api-client:1.23.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    compile 'com.google.apis:google-api-services-calendar:v3-rev292-1.23.0'  
+    compile 'javax.mail:javax.mail-api:1.5.1'  
+    compile 'commons-codec:commons-codec:1.4'
+    compile 'com.sun.mail:javax.mail:1.6.0'
+    compile 'commons-lang:commons-lang:2.6'
+}
+
