@@ -22,6 +22,8 @@ public class ArgentinaGDC extends CPUEvent
    private String notifNum = "";
 
  
+
+
  // var tipoNotificacion is for having in a String the kind of notification we have ("Inicio", "Fin", "Fin (Cancelada)", etc)
    private String tipoNotificacion = "";
 
