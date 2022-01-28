@@ -23,7 +23,7 @@ public class ArgentinaGDC extends CPUEvent
 
  
 
-
+// meto texto para pruebas de commit y revert
  // var tipoNotificacion is for having in a String the kind of notification we have ("Inicio", "Fin", "Fin (Cancelada)", etc)
    private String tipoNotificacion = "";
 
